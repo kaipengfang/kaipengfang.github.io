@@ -220,7 +220,7 @@ ul.task-list input[type="checkbox"] {
 
 @media (min-width: 576px) {
   .profile {
-    width: 30%;
+    width: 35%;
 
     .address {
       p {
@@ -412,40 +412,78 @@ ul.task-list input[type="checkbox"] {
 // Social (bottom)
 
 .social {
-  text-align: center;
+  text-align: left;
 
   .contact-icons {
-    font-size: 4rem;
+    font-size: 1.2rem;
+    padding-bottom: 0.5rem;
 
     a {
+      display: inline-block;
+      background-color: #075a95;
+      width: 2.2rem;
+      height: 2.2rem;
+      line-height: 2.2rem;
+      text-align: center;
+      border-radius: 0.3rem;
+      margin-right: 0.8rem;
+      margin-bottom: 0.8rem;
+      transition: all 0.2s ease-in-out;
+
       img {
-        width: 3.2rem;
-        height: 3.2rem;
-        margin-bottom: 1rem;
+        width: 1.3rem;
+        height: 1.3rem;
+        vertical-align: middle;
       }
 
       svg {
-        width: 3.5rem;
-        height: 4rem;
-        margin-bottom: 0.5rem;
+        width: 1.3rem;
+        height: 1.3rem;
+        vertical-align: middle;
 
         image {
-          width: 3.5rem;
-          height: 3.5rem;
+          width: 1.3rem;
+          height: 1.3rem;
         }
       }
 
       i::before {
-        color: var(--global-text-color);
+        color: white;
         transition-property: all 0.2s ease-in-out;
       }
 
       &:hover {
         text-decoration: none;
+        background-color: rgb(8, 46, 121);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 
         i::before {
-          color: var(--global-theme-color);
+          color: white;
         }
+      }
+    }
+
+    a.blog-link {
+      background-color: transparent;
+      width: auto;
+      height: 2.2rem;
+      padding: 0;
+      vertical-align: top;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: auto;
+        height: 2.2rem;
+        max-width: 8rem;
+        border-radius: 0.3rem;
+      }
+
+      &:hover {
+        transform: translateY(-2px);
+        filter: brightness(0.9);
       }
     }
   }
@@ -457,31 +495,46 @@ ul.task-list input[type="checkbox"] {
 
 .wechat-modal {
   display: none;
-  position: fixed;
-  z-index: 1;
-  padding-top: 100px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgb(0, 0, 0);
-  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  z-index: 1000;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 1.5rem;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 0.5rem;
+  width: auto;
+  max-width: none;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 10px solid transparent;
+    border-bottom-color: white;
+  }
 }
 
 .wechat-modal > img {
   display: block;
+  width: 400px;
+  height: 400px;
+  border-radius: 0.3rem;
+  max-width: none;
+}
+
+.wechat-toggle {
   position: relative;
-  top: 50%;
-  left: 50%;
-  width: 33%;
-  max-width: 400px;
-  transform: translate(-50%, -50%);
 }
 
 @media only screen and (max-width: 400px) {
   .wechat-modal > img {
-    width: 100%;
+    width: 280px;
+    height: 280px;
   }
 }
 
@@ -781,6 +834,8 @@ footer.sticky-bottom {
       }
 
       .author {
+        white-space: nowrap;
+
         a {
           border-bottom: 1px dashed var(--global-theme-color);
 
@@ -805,6 +860,10 @@ footer.sticky-bottom {
             border-bottom: 1px dashed var(--global-text-color);
           }
         }
+      }
+
+      .periodical {
+        white-space: nowrap;
       }
 
       .links {
@@ -879,6 +938,14 @@ footer.sticky-bottom {
       }
 
       div.abstract.hidden.open {
+        border-color: var(--global-text-color);
+      }
+
+      div.tldr.hidden {
+        border: dashed 1px var(--global-bg-color);
+      }
+
+      div.tldr.hidden.open {
         border-color: var(--global-text-color);
       }
     }

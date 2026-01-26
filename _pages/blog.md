@@ -1,9 +1,9 @@
 ---
 layout: default
-permalink: /blog/
 title: blog
 nav: true
 nav_order: 1
+external_url: https://fangkaipeng.com/
 pagination:
   enabled: true
   collection: posts

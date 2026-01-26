@@ -35,6 +35,23 @@ layout: default
         {% if page.profile.more_info %}
           <div class="more-info">{{ page.profile.more_info }}</div>
         {% endif %}
+        {% if page.social_in_profile %}
+          <div class="social">
+            <div class="contact-icons">
+              {% social_links %}
+              <a href="javascript:void(0);" title="WeChat Official Account" class="wechat-toggle">
+                <i class="fab fa-weixin"></i>
+                <!-- WeChat QR Code Bubble -->
+                <div id="wechat-modal" class="wechat-modal">
+                  <img src="{{ '/assets/img/wechat_qrcode.jpg' | relative_url }}" alt="WeChat QR Code">
+                </div>
+              </a>
+              <a href="https://fangkaipeng.com" title="Personal Blog" target="_blank" rel="noopener noreferrer" class="blog-link">
+                <img src="{{ '/assets/img/blog_logo.png' | relative_url }}" alt="Personal Blog">
+              </a>
+            </div>
+          </div>
+        {% endif %}
       </div>
     {% endif %}
 
@@ -43,7 +60,7 @@ layout: default
     <!-- News -->
     {% if page.announcements and page.announcements.enabled %}
       <h2>
-        <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
+        <a href="{{ '/news/' | relative_url }}" style="color: inherit">News</a>
       </h2>
       {% include news.liquid limit=true %}
     {% endif %}
@@ -51,7 +68,7 @@ layout: default
     <!-- Latest posts -->
     {% if page.latest_posts and page.latest_posts.enabled %}
       <h2>
-        <a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest posts</a>
+        <a href="{{ '/blog/' | relative_url }}" style="color: inherit">Latest Posts</a>
       </h2>
       {% include latest_posts.liquid %}
     {% endif %}
@@ -59,13 +76,37 @@ layout: default
     <!-- Selected papers -->
     {% if page.selected_papers %}
       <h2>
-        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a>
+        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">Publications</a>
       </h2>
       {% include selected_papers.liquid %}
     {% endif %}
 
+    <!-- Programming Competition Awards -->
+    {% if page.competition_awards %}
+      <h2>Programming Competition Awards (Selected)</h2>
+      <div class="competition-awards">
+        {{ page.competition_awards_content | markdownify }}
+      </div>
+    {% endif %}
+
+    <!-- Honors and Services -->
+    {% if page.honors_services %}
+      <h2>Honors and Services</h2>
+      <div class="honors-services">
+        {{ page.honors_services_content | markdownify }}
+      </div>
+    {% endif %}
+
+    <!-- Miscellaneous -->
+    {% if page.miscellaneous %}
+      <h2>Miscellaneous</h2>
+      <div class="miscellaneous">
+        {{ page.miscellaneous_content | markdownify }}
+      </div>
+    {% endif %}
+
     <!-- Social -->
-    {% if page.social %}
+    {% if page.social and page.social_in_profile != true %}
       <div class="social">
         <div class="contact-icons">{% social_links %}</div>
 
