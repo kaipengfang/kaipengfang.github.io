@@ -10,9 +10,11 @@
     Last updated: {{ 'now' | date: '%B %d, %Y' }}.
   {% endif %}
   <br>
-  <span id="busuanzi_container_site_pv">
-    Total visits: <span id="busuanzi_value_site_pv"></span>
-  </span>
+  <small style="opacity: 0.6;">
+    <span id="vercount_value_site_pv">-</span> visits |
+    <span id="vercount_value_site_uv">-</span> visitors |
+    <span id="vercount_value_page_pv">-</span> views
+  </small>
 {% endcapture %}
 
 {% if site.footer_fixed %}
