@@ -92,3 +92,5 @@ Hi, I'm **Kaipeng Fang (方恺鹏 in Chinese)**. I am a third-year Ph.D. student
 My early research focused on Computer Vision (CV) and Image Retrieval, leading to a publication at CVPR 2024. Currently, my research interests have shifted toward **Embodied AI** and **Robotics**. <u>I am particularly focused on exploring how to effectively leverage data from various sources, especially human data, for generalizable robot learning.</u> Having long admired Elon Musk’s mindset, I strictly align my research philosophy with first principles. My ultimate goal is to achieve true generalist robots by scaling up data-driven robot learning.
 
 I also maintain a personal research blog at <a href="https://fangkaipeng.com"> ByteGather (码途拾遗 in Chinese)</a>, where I share insights on algorithms, machine learning, and robotics. It currently hosts 200+ articles and has attracted more than 360k visitors. Additionally, I run a WeChat Official Account with over 3k subscribers.
+
+When I'm not training robots, I'm training myself 🏋️, exploring the world, and shooting the journey. See my <a href="https://gallery.fangkaipeng.com">TravelShot</a>.
