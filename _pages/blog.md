@@ -1,6 +1,6 @@
 ---
 layout: default
-title: blog
+title: Blog
 nav: true
 nav_order: 1
 external_url: https://fangkaipeng.com/
