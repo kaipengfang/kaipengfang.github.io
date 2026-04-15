@@ -1,11 +1,11 @@
 metadata:
-  last_updated: '2026-03-30'
+  last_updated: '2026-04-15'
 papers:
   WKPwQi8AAAAJ:2osOgNQ5qMEC:
     citations: 0
     title: Sim-and-Human Co-training for Data-Efficient and Generalizable Robotic Manipulation
     year: '2026'
   WKPwQi8AAAAJ:9yKSN-GCB0IC:
-    citations: 31
+    citations: 32
     title: 'Pros: Prompting-to-simulate generalized knowledge for universal cross-domain retrieval'
     year: '2024'
