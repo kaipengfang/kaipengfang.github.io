@@ -519,12 +519,14 @@ ul.task-list input[type="checkbox"] {
   }
 }
 
-.wechat-modal > img {
+.wechat-modal > img,
+#wechat-modal img {
   display: block;
-  width: 400px;
-  height: 400px;
+  width: 260px !important;
+  height: 260px !important;
+  max-width: none !important;
+  max-height: none !important;
   border-radius: 0.3rem;
-  max-width: none;
 }
 
 .wechat-toggle {
@@ -532,9 +534,10 @@ ul.task-list input[type="checkbox"] {
 }
 
 @media only screen and (max-width: 400px) {
-  .wechat-modal > img {
-    width: 280px;
-    height: 280px;
+  .wechat-modal > img,
+  #wechat-modal img {
+    width: 220px !important;
+    height: 220px !important;
   }
 }
 
