@@ -496,8 +496,10 @@ ul.task-list input[type="checkbox"] {
 .wechat-modal {
   display: none;
   position: absolute;
-  z-index: 1000;
-  background-color: white;
+  z-index: 5000 !important;
+  background-color: #fff !important;
+  opacity: 1 !important;
+  isolation: isolate;
   border-radius: 0.5rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   padding: 1.5rem;
@@ -531,7 +533,12 @@ ul.task-list input[type="checkbox"] {
 
 .wechat-toggle {
   position: relative;
+  z-index: 5000;
 }
+.wechat-toggle:hover,
+.wechat-toggle:focus-within { z-index: 5001; }
+.wechat-modal > img,
+#wechat-modal img { position: relative; z-index: 1; background: #fff; }
 
 @media only screen and (max-width: 400px) {
   .wechat-modal > img,
